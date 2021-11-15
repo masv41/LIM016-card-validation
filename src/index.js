@@ -1,5 +1,4 @@
 import validator from './validator.js';
-
 console.log(validator);
 export function onlyNumbers(e) {
     let key = e.key.Code || e.which;
@@ -7,13 +6,11 @@ export function onlyNumbers(e) {
     //let allowedNumbers= "0123456789";
     let unicode = "8-37-38-46";
     let keyboard_Unicode = false;
-
     for (var i in unicode) {
         if (key == unicode[i]) {
             keyboard_Unicode = true;
         }
     }
-
     if (key.indexOf(keyboard) == -1 && !keyboard_Unicode) {
         return false;
     }
