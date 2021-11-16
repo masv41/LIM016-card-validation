@@ -3,39 +3,32 @@
 ## RESUMEN DEL PROYECTO
 
 "PONTE BONITA" es una página web de venta de trajes de baños cuya finalidad es reforzar la confianza en mujeres
-<img src= "PONTE BONITA.png">
-## 1. 
 
-El [algoritmo de Luhn](https://es.wikipedia.org/wiki/Algoritmo_de_Luhn),
-también llamado algoritmo de módulo 10, es un método de suma de verificación,
-se utiliza para validar números de identificación; tales como el IMEI de los
-celulares, tarjetas de crédito, etc.
+![Imagen del proyecto](https://drive.google.com/file/d/1KP3qOH8jRxieCJyxuaBcbuxYjiGx3kiT/view?usp=sharing)
 
-Este algoritmo es simple. Obtenemos la reversa del número a verificar (que
-solamente contiene dígitos [0-9]); a todos los números que ocupan una posición
-par se les debe multiplicar por dos, si este número es mayor o igual a 10,
-debemos sumar los dígitos del resultado; el número a verificar será válido si
-la suma de sus dígitos finales es un múltiplo de 10.
+## 1. Investigación UX:
+i. "PONTE BONITA" es una página web dirigida a mujeres entre 16 a 25 años de edad, de tallas desde la XS a la XXL, está página fue creada con la intención de hacer sentir seguras a las mujeres con su cuerpo en ropa de baño y permitirles hacer una compra sencilla y segura.
 
-![gráfica de algoritmo de Luhn](https://www.101computing.net/wp/wp-content/uploads/Luhn-Algorithm.png)
+ii. Está página les permite a nuestras usuarios hacer una compra segura y sencilla siguiendo los siguientes pasos:
 
-## 2. Resumen del proyecto
+El usuario debera ingresar:
 
-En este proyecto tendrás que construir una aplicación web que le permita a un
-usuario validar el número de una tarjeta de crédito. Además, tendrás que
-implementar funcionalidad para ocultar todos los dígitos de una tarjeta menos
-los últimos cuatro.
+-Nombre de usuario
+-Número de tarjeta Que contenga sólo 16 dígitos
+-Click en botón "validar" Para realizar la transacción
+-Si todas las validaciones son correctas aparecerá en el navegador el mensaje "Tarjeta válida" y se podrá hacer click en *"OK"*.
 
-La temática es libre. Tú debes pensar en qué situaciones de la vida real se
-necesitaría validar una tarjeta de crédito y pensar en cómo debe ser esa
-experiencia de uso (qué pantallas, explicaciones, mensajes, colores, ¿marca?)
-etc.
+# PROTOTIPO EN PAPEL 
 
-Trabajando en parejas aprenderán a construir una aplicación web que interactuará
-con lx usuarix final a través del navegador, utilizando HTML, CSS y JavaScript
-como tecnologías.
+![PROTOTIPO EN PAPEL](https://drive.google.com/file/d/15sCimcm4IYlGY1AmrEBOoC24X2mHa5Dz/view?usp=sharing)
 
-## 3. Objetivos de aprendizaje
+# FEEDBACK RECIBIDO
 
-Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
+Mis compañeras aconsejaron hacer las siguientes modificaciones:
+-Una vista más realista y sencilla.
+-Botones de tipo de tarjeta innecesarios.
+-Reorganizar la vista y el resumen de compra ya que puede verse desordenado.
 
+# PROTOTIPO FINAL 
+
+¡[PROTOTIPO FINAL](https://www.figma.com/file/rmgSlsnp9zi9jKbgYsKS0i/Untitled?node-id=1%3A2)

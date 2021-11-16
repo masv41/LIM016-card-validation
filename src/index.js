@@ -3,7 +3,7 @@ console.log(validator);
 export const onlyNumbers = (e) => {
     let key = e.key.Code || e.which;
     let keyboard = String.fromCharCode(key);
-    //let allowedNumbers= "0123456789";
+    let allowedNumbers= "0123456789";
     let unicode = "8-37-38-46";
     let keyboard_Unicode = false;
     for (var i in unicode) {
