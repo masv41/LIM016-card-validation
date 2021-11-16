@@ -1,206 +1,219 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700|Source+Sans+Pro:400,600,700&display=swap');
-
-body {
-    background: #ddeefc;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 16px;
-}
-* {
-    box-sizing: border-box;
-    &:focus {
-        outline: none;
-    }
-}
-.wrapper {
-    min-height: 100vh;
-    display: flex;
-    padding: 50px 15px;
-    @media screen and (max-width: 700px), (max-height: 500px) {
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
+/* -------- caja que cubre todo el formulario--------- */
+#payments {
+    background: #ffffff;
+    width: 21.5%;
+    padding: 2.8em;
+    /* margin:auto; */
+    /* margin: 20px 0px 30px 550px; */
+    margin: 4% 0% 6% 64%;
+    /* margin-top: 1.7em;
+      margin-right: 30%;
+      margin-left: 64%; */
+    text-align: left;
+    border-radius: 0.6em;
+    box-shadow: 0 0 20em rgb(175, 42, 175);
+  }
+  /* -----------COLOR DE CABECERA Y PADDING--------- */
+header {
+  background: #876099;
+  padding: 20px;
 }
 
-.card-form {
-    max-width: 570px;
-    margin: auto;
+/* ----- LETRAS DE CABECERA---- */
+.header a {
+  color: white;
+  text-decoration: none;
+  font-size: 40px;
+}
+
+  /* ------caja de los elementos del formulario------ */
+  .grupo_contenido_formulario {
     width: 100%;
-
-    @media screen and (max-width: 576px) {
-        margin: 0 auto;
-    }
-
-    &__inner {
-        background: #fff;
-        // box-shadow: 3px 13px 30px 0px rgba(21, 34, 67, 0.2);
-        box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
-        border-radius: 10px;
-        padding: 35px;
-        padding-top: 180px;
-
-        @media screen and (max-width: 480px) {
-            padding: 25px;
-            padding-top: 165px;
-        }
-        @media screen and (max-width: 360px) {
-            padding: 15px;
-            padding-top: 165px;
-        }
-    }
-
-    &__row {
-        display: flex;
-        align-items: flex-start;
-        @media screen and (max-width: 480px) {
-            flex-wrap: wrap;
-        }
-    }
-
-    &__col {
-        flex: auto;
-        margin-right: 35px;
-
-        &:last-child {
-            margin-right: 0;
-        }
-
-        @media screen and (max-width: 480px) {
-            margin-right: 0;
-            flex: unset;
-            width: 100%;
-            margin-bottom: 20px;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-
-        &.-cvv {
-            max-width: 150px;
-            @media screen and (max-width: 480px) {
-                max-width: initial;
-            }
-        }
-    }
-
-    &__group {
-        display: flex;
-        align-items: flex-start;
-        flex-wrap: wrap;
-
-        .card-input__input {
-            flex: 1;
-            margin-right: 15px;
-
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-    }
-
-    &__button {
-        width: 100%;
-        height: 55px;
-        background: #2364d2;
-        border: none;
-        border-radius: 5px;
-        font-size: 22px;
-        font-weight: 500;
-        font-family: 'Source Sans Pro', sans-serif;
-        box-shadow: 3px 10px 20px 0px rgba(35, 100, 210, 0.3);
-        color: #fff;
-        margin-top: 20px;
-        cursor: pointer;
-
-        @media screen and (max-width: 480px) {
-            margin-top: 10px;
-        }
-    }
-}
-
-.card-list {
-    margin-bottom: -130px;
-
-    @media screen and (max-width: 480px) {
-        margin-bottom: -120px;
-    }
-}
-
-.card-input {
-    margin-bottom: 20px;
-    &__label {
-        font-size: 14px;
-        margin-bottom: 5px;
-        font-weight: 500;
-        color: #1a3b5d;
-        width: 100%;
-        display: block;
-        user-select: none;
-    }
-    &__input {
-        width: 100%;
-        height: 50px;
-        border-radius: 5px;
-        box-shadow: none;
-        border: 1px solid #ced6e0;
-        transition: all 0.3s ease-in-out;
-        font-size: 18px;
-        padding: 5px 15px;
-        background: none;
-        color: #1a3b5d;
-        font-family: 'Source Sans Pro', sans-serif;
-
-        &:hover,
-        &:focus {
-            border-color: #3d9cff;
-        }
-
-        &:focus {
-            box-shadow: 0px 10px 20px -13px rgba(32, 56, 117, 0.35);
-        }
-        &.-select {
-            -webkit-appearance: none;
-            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAeCAYAAABuUU38AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAUxJREFUeNrM1sEJwkAQBdCsngXPHsQO9O5FS7AAMVYgdqAd2IGCDWgFnryLFQiCZ8EGnJUNimiyM/tnk4HNEAg/8y6ZmMRVqz9eUJvRaSbvutCZ347bXVJy/ZnvTmdJ862Me+hAbZCTs6GHpyUi1tTSvPnqTpoWZPUa7W7ncT3vK4h4zVejy8QzM3WhVUO8ykI6jOxoGA4ig3BLHcNFSCGqGAkig2yqgpEiMsjSfY9LxYQg7L6r0X6wS29YJiYQYecemY+wHrXD1+bklGhpAhBDeu/JfIVGxaAQ9sb8CI+CQSJ+QmJg0Ii/EE2MBiIXooHRQhRCkBhNhBcEhLkwf05ZCG8ICCOpk0MULmvDSY2M8UawIRExLIQIEgHDRoghihgRIgiigBEjgiFATBACAgFgghEwSAAGgoBCBBgYAg5hYKAIFYgHBo6w9RRgAFfy160QuV8NAAAAAElFTkSuQmCC');
-            background-size: 12px;
-            background-position: 90% center;
-            background-repeat: no-repeat;
-            padding-right: 30px;
-        }
-    }
-}
-
-.github-btn {
-    position: absolute;
-    right: 40px;
-    bottom: 50px;
-    text-decoration: none;
-    padding: 15px 25px;
-    border-radius: 4px;
-    box-shadow: 0px 4px 30px -6px rgba(36, 52, 70, 0.65);
-    background: #24292e;
-    color: #fff;
-    font-weight: bold;
-    letter-spacing: 1px;
-    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* -------titulo de los inputs el label------- */
+  .registro_de_formulario label {
+    color: #F8BFED;
+    font-size: 1.1em;
+    font-weight: 610;
+  }
+  /* ---------------inputs---------------------- */
+  
+  .ingreso_datos {
+    border: 2px solid #c5c8e9;
+    height: 40px;
+    background: #c5c8e9;
+    font-size: 0.9em;
+    font-weight: 6em;
+    border-radius: 0.4em;
+    color: #000000;
+    padding: 0px 20px 0px 0px;
+    width: 15em;
+    outline: none;
+  }
+  
+  /* --------estilo de boton de validación ------ */
+  .buttonValidation {
+    background-color: #876099; /* blue */
+    border-radius: 0.5em;
+    border: 1.5px solid rgb(219, 72, 238);
+    color: white;
+    padding: 15px 32px;
     text-align: center;
-    transition: all 0.3s ease-in-out;
-
-    @media screen and (min-width: 500px) {
-        &:hover {
-            transform: scale(1.1);
-            box-shadow: 0px 17px 20px -6px rgba(36, 52, 70, 0.36);
-        }
-    }
-
-    @media screen and (max-width: 700px) {
-        position: relative;
-        bottom: auto;
-        right: auto;
-        margin-top: 20px;
-
-        &:active {
-            transform: scale(1.1);
-            box-shadow: 0px 17px 20px -6px rgba(36, 52, 70, 0.36);
-        }
-    }
-}
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .buttonValidation:hover {
+    background-color: rgb(238, 72, 230);
+  }
+  
+  /* -----------------POPUP PARA LA VENTANA EMERGENTE DE LA VALIDACIÓN--------------- */
+  
+  /*----- texto que escribe que fue valido o invalido en negrita y más grande------  */
+  .validacion {
+    margin: 5px 0px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  /* --------texto más descriptivo que indica que fue valido o invalido más pequeño  */
+  .description {
+    color: #222;
+    font-size: 15px;
+    padding: 5px;
+  }
+  
+  /* ---boton de cerrar popup--- */
+  .dismiss-btn {
+    margin-top: 15px;
+  }
+  
+  /* ----la caja completa de el popup en toda la ventana---- */
+  
+  /* ------overlay respuesta correcta----- */
+  .overlay {
+    background: rgba(255, 209, 209, 0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    transform: translate(0%, 0%) scale(0.5);
+    transition: opacity 100ms ease-in-out, transform 1000ms ease-in-out;
+  }
+  
+  .overlay.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0%, 0%) scale(1);
+    transition: transform 300ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
+  }
+  
+  /* ------el icono de valido ---- */
+  .icon {
+    margin: 5px 0px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #34f234;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 60px;
+  }
+  .icon i.fa {
+    font-size: 30px;
+    color: #34f234;
+  }
+  
+  /* ----------overlay respuesta incorrecta-------- */
+  
+  .overlay2 {
+    background: rgba(255, 209, 209, 0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    transform: translate(0%, 0%) scale(0.5);
+    transition: opacity 100ms ease-in-out, transform 1000ms ease-in-out;
+  }
+  
+  .overlay2.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0%, 0%) scale(1);
+    transition: transform 300ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
+  }
+  
+  /* ------el icono de invalido ---- */
+  .icon2 {
+    margin: 5px 0px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #f24134;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 60px;
+  }
+  .icon2 i.fa {
+    font-size: 30px;
+    color: #f24134;
+  }
+  
+  /* -----solo la caja de validacion el área de su cuadrado ---- */
+  .mostrar_validacion {
+    background: #ffffff;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    width: 270px;
+    /* transition: all 300ms ease-in-out 350ms; */
+  }
+  
+  /* ---boton de OK en el popup ---- */
+  .btn-submit {
+    /* padding: 0 20px;
+      height: 40px;
+      line-height: 40px;
+      border: none;
+      color: #fff;
+      background: rgb(42, 78, 175);
+      border-radius: 3px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: .3s ease all;*/
+    text-align: center;
+    padding: 12px 13px;
+    background: #173f9c;
+    color: #f5f5f5;
+    border: 2px solid #0d2661;
+    font-size: 16px;
+    font-weight: 600;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 4em;
+    margin-top: 0.6em;
+  
+    /* transition: all 300ms ease-in-out ; */
+  }
+  
+  .btn-submit:hover {
+    background: rgb(72, 172, 238);
+    /* transition: all 300ms ease-in-out ; */

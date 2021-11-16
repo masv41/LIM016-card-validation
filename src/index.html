@@ -6,26 +6,53 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-
+    <header class= "header">
+      <a href="href=#" >PONTE BONITA</a>
     </header>
     <main>
-      <section id= "payments" class= "payments"></section>
+      <section id= "payments" class= "payments">
       <h1>INGRESE SUS DATOS PARA PROCESAR SU COMPRA</h1>
       <div id="grupo_usuario">
         <label for="nombre_usuario">Usuario</label><br><br>
-        <input class="ingreso_datos" type="text"  id="nombre_usuario" maxlength="19" name="nombre_usuario"   placeholder="Usuario"><br><br>
+        <input class="ingreso_datos" type="text"  id="username" maxlength="19" name="nombre_usuario"   placeholder="Usuario"><br><br>
       </div>
       <div id="grupo__usuario" class="formulario_input-error">
         <p>El usuario solo puede contener letras.</p>
       </div>
       <div id="grupo_numero_tarjeta"> 
-              <label for="cardNumber">Número de Tarjeta</label><br><br>
-              <input class="ingreso_datos" type="text" id="cardNumber" maxlength ="16" autocomplete="off" name="cardNumber" placeholder="Número de tarjeta" onkeypress="return onlyNumbers(event)" onpaste="return false" >
-              <br>
-              <br>
-            </div>       
-            <button  type="submit" id="validation_button" class="validation_button">VALIDAR</button><br><br>
+         <label for="cardNumber">Número de Tarjeta</label><br><br>
+         <input class="ingreso_datos" type="text" id="cardNumber" maxlength ="16" autocomplete="off" name="cardNumber" placeholder="Número de tarjeta"  onpaste="false" >
+      </div>   
+      <div id="grupo__numero_tarjeta" class="formulario_input-error">
+                <p>Solo puede contener numeros.</p>
+     </div>
+     <br>
+     <br>
+            <button  type="submit" id="buttonValidation" class="buttonValidation">VALIDAR</button><br><br>
+      </section>
+      
+      <div class="overlay" id="overlay">
+      <div class="mostrar_validacion" id="mostrar_validacion">
+      <div class="icon" id="icon">
+        </div>
+          <p class="validacion" id ="validacion"></p>
+          <div class="description" id="description">
+          </div>
+          <input id="close" type="sybmit" class="btn-submit" value="OK">      
+      </div>      
+      </div>
+      
+      <div class="overlay2" id="overlay2">
+      <div class="mostrar_validacion" id="mostrar_validacion2">
+      <div class="icon2" id="icon2">
+      </div>
+          <p class="validacion" id ="validacion2"></p>
+      <div class="description" id="description2">
+      </div>
+          <input id="closeTwo" type="sybmit" class="btn-submit" value="OK">        
+      </div>      
+      </div>
+      
     </main>
     <footer class="footerPrivacidad" id="footer">
       <div style="margin:auto ">Todos los derechos reservados © Copyrights 2021 Diseñado por MASV</div>

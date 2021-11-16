@@ -1,6 +1,6 @@
 import validator from './validator.js';
 console.log(validator);
-export function onlyNumbers(e) {
+export const onlyNumbers = (e) => {
     let key = e.key.Code || e.which;
     let keyboard = String.fromCharCode(key);
     //let allowedNumbers= "0123456789";
@@ -26,17 +26,9 @@ const overlay2 = document.getElementById("overlay2");
 const close = document.getElementById('close');
 const closeTwo = document.getElementById('closeTwo');
 
-const validarFrom = (e) => {
-    switch (e.target.name) {
-        case "username":
-            validationInputs(expresiones.username, e.target, "username");
-            break;
-        case "cardNUmber":
-            validationInputs(expresiones.cardNumber, e.target, "cardNumber");
-            break;
-    }
-}
+
 const validationInputs = (expresion, input, campo) => {
+    console.log(expresion.test(input.value), 'test', input.value, 'input');
     if (expresion.test(input.value)) {
         document.getElementById(`grupo_${campo}`).classList.add("formulario_grupo_correcto");
         document.getElementById(`grupo_${campo}`).classList.remove("formulario_grupo_incorrecto");
@@ -48,6 +40,19 @@ const validationInputs = (expresion, input, campo) => {
     }
 
 }
+
+const validarFrom = (e) => {
+    console.log(e.target.name, 'dentro')
+    switch (e.target.name) {
+        case "username":
+            validationInputs(expresiones.username, e.target, "username");
+            break;
+        case "cardNumber":
+            validationInputs(expresiones.cardNumber, e.target, "cardNumber");
+            break;
+    }
+}
+
 
 inputs.forEach((input) => {
     input.addEventListener("keyup", validarFrom);
@@ -63,7 +68,7 @@ buttonValidation.addEventListener("click", e => {
     let creditCardNumber = document.getElementById("cardNumber");
     let resultado = validator.isValid(creditCardNumber.value);
     let dataHidden = validator.maskify(creditCardNumber.value);
-
+console.log('resultado', resultado);
     // ------no permite espacios vacios-------
     if (creditCardNumber.value == "" || nombre_usuario.value == "") {
         alert("Ups!,algo salió mal. Completa el formulario para continuar");
@@ -86,12 +91,12 @@ buttonValidation.addEventListener("click", e => {
     }
 })
 
-close.addEventListener("click", e => {
+ close.addEventListener("click", e => {
     e.preventDefault
     overlay.classList.remove("active");
 
-})
-closeTwo.addEventListener("click", e => {
+}) 
+ closeTwo.addEventListener("click", e => {
     e.preventDefault
     overlay2.classList.remove("active");
 });
