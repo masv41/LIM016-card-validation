@@ -3,12 +3,7 @@
     background: #ffffff;
     width: 21.5%;
     padding: 2.8em;
-    /* margin:auto; */
-    /* margin: 20px 0px 30px 550px; */
     margin: 4% 0% 6% 64%;
-    /* margin-top: 1.7em;
-      margin-right: 30%;
-      margin-left: 64%; */
     text-align: left;
     border-radius: 0.6em;
     box-shadow: 0 0 20em rgb(175, 42, 175);
@@ -73,7 +68,7 @@ header {
     background-color: rgb(238, 72, 230);
   }
   
-  /* -----------------POPUP PARA LA VENTANA EMERGENTE DE LA VALIDACIÓN--------------- */
+  /* -----------------VENTANA EMERGENTE DE LA VALIDACIÓN--------------- */
   
   /*----- texto que escribe que fue valido o invalido en negrita y más grande------  */
   .validacion {
@@ -89,12 +84,12 @@ header {
     padding: 5px;
   }
   
-  /* ---boton de cerrar popup--- */
+  /* ---boton de cerrar ventana emergente--- */
   .dismiss-btn {
     margin-top: 15px;
   }
   
-  /* ----la caja completa de el popup en toda la ventana---- */
+  /* ----la caja completa de la ventana emergente en toda la ventana---- */
   
   /* ------overlay respuesta correcta----- */
   .overlay {
@@ -186,18 +181,8 @@ header {
     /* transition: all 300ms ease-in-out 350ms; */
   }
   
-  /* ---boton de OK en el popup ---- */
+  /* ---boton de OK en la Ventana emergente ---- */
   .btn-submit {
-    /* padding: 0 20px;
-      height: 40px;
-      line-height: 40px;
-      border: none;
-      color: #fff;
-      background: rgb(42, 78, 175);
-      border-radius: 3px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: .3s ease all;*/
     text-align: center;
     padding: 12px 13px;
     background: #173f9c;
@@ -210,10 +195,7 @@ header {
     cursor: pointer;
     width: 4em;
     margin-top: 0.6em;
-  
-    /* transition: all 300ms ease-in-out ; */
   }
-  
+
   .btn-submit:hover {
     background: rgb(72, 172, 238);
-    /* transition: all 300ms ease-in-out ; */

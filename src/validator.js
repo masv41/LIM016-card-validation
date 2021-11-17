@@ -11,7 +11,7 @@ const validator =  {
         }
         contador += parseInt(number[i]);
     }
-    if (contador % 10== 0) {
+    if (contador % 10 == 0) {
         return true;
     }else{
         return false
